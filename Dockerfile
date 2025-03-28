@@ -28,11 +28,11 @@ RUN pip3 install -r /tmp/requirements.txt
 RUN echo "dash dash/sh boolean false" | debconf-set-selections && \
     dpkg-reconfigure -p low dash
 
-# 设置工作目录
-WORKDIR /workspace
+# # 设置工作目录
+# WORKDIR /workspace
 
-# 将用户的源码和其他文件（例如README）添加到容器
-COPY . /workspace
+# # 将用户的源码和其他文件（例如README）添加到容器
+# COPY . /workspace
 
 # 执行完毕后的默认命令
 CMD ["/bin/bash"]
